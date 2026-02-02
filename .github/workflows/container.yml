@@ -4,7 +4,12 @@ on:
       - main
 name: Testing Container
 jobs:
-  build:
+  node-job:
     runs-on: ubuntu-latest
+    container:
+      image: node:12
     steps:
-      - run: echo "Adnan"
+      - name: Run a command
+        run: node --version
+      
+      
