@@ -2,3 +2,9 @@ on:
   push:
     branches:
       - main
+name: Testing Container
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Adnan"
