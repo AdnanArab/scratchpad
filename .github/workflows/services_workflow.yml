@@ -1,0 +1,12 @@
+on: 
+  workflow_dispatch: 
+name: Services Workflow
+jobs:
+  node-job:
+    runs-on: ubuntu-latest
+    services:
+      my_service:
+        image: node:14
+    steps:
+      - name: Run a command
+        run: node --version
