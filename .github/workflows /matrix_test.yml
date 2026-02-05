@@ -1,0 +1,17 @@
+name: Test the martix
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  matrix_test:
+    strategy:
+      matrix:
+        os:[ubuntu-latest,macos-latest,windows-latest]
+    runs-on: {{ matrix.os }}
+    steps:
+    - name: Checkout the code
+      uses: actions/checkout@v4
+
