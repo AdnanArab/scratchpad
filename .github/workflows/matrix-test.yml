@@ -12,5 +12,5 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
       - name: Echo something
-        runs: echo "Hello Adnan"
+        run: echo "Hello Adnan"
     
