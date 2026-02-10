@@ -1,0 +1,11 @@
+name: Test ping
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test_ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ping google
+        run: ping -c 5 www.google.com
